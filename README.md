@@ -1,4 +1,4 @@
-# Tether-Multiplayer-Movement
+# Tether Multiplayer Movement Document
 **Tether Multiplayer Movement Plugin Usage Guide**
 
 ---
