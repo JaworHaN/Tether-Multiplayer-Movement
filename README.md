@@ -77,24 +77,11 @@ Configurable parameters include: **maximum distance**, **elasticity**, **pull st
 ## Important Notes & Tips
 - **Security:** Client authoritative movement is great for co-op and party games. Avoid it for competitive PvP unless you add server checks or anti-cheat.  
 - **Replication flags:** Make sure `bReplicates` is true on characters and relevant components, but `Replicate Movement` is turned OFF when using the plugin movement component.  
-- **Performance:** Server LERP reduces jitter but tune interpolation rates for your tick rate to avoid visible smoothing lag.  
-- **Multiple tethers:** When linking more than 2 players, test group dynamics carefully (pull strengths and elasticity interact nonlinearly).  
-- **Debugging:** Use log prints and the network profiler to inspect replication frequency and packet size if you observe issues.
 
 ---
 
 ## Troubleshooting
-- **Players teleporting/snapping:** Check interpolation settings on the server smoothing and ensure clients are sending consistent, validated movement payloads.  
 - **Animation desyncs:** Use the network getters from `BPI_TetherPlayer` inside the Animation Blueprint.  
-- **Tether jitter:** Reduce anchor update frequency or increase elasticity damping.
-
----
-
-## Files & Where to Look
-- `BP_MyTetherCharacter` base character (parent blueprint)  
-- `MovementReplicationComponent` attach to character to enable movement system only  
-- `GM_TetherMode` GameMode with required setup  
-- `BPI_TetherPlayer` and `BPI_AnimationBlueprint` interfaces for character & animation integration
 
 ---
 
